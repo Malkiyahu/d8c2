@@ -22,7 +22,9 @@
         "drupal/core": "~8.0",
         "drush/drush": "~8.0",
         "drupal/console": "~1.0",
-        "drupal/devel": "8.*"
+        "drupal/devel": "8.*",
+        "drupal/admin_toolbar": ">=1.0",
+        "drupal/commerce": "2.x-dev"
     },
     "require-dev": {
         "behat/mink": "~1.7",
