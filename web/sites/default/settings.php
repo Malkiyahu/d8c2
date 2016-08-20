@@ -86,7 +86,17 @@
  * );
  * @endcode
  */
- $databases = array();
+$databases['default']['default'] = array (
+  'database' => 'drupal8commerce2',
+  'username' => 'drupal8commerce2',
+  'password' => 'drupal8commerce2',
+  'prefix' => '',
+  'host' => 'localhost',
+  'port' => '',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+  'collation' => 'utf8mb4_general_ci',
+);
 
 /**
  * Customizing database settings.
@@ -245,6 +255,7 @@
  * @endcode
  */
 $config_directories = array();
+$config_directories['sync'] = 'sites/default/files/config_lTlv6twN1CvqI5Zk5o0yrdZy_aHCTZfFH1t0vddTN9EEi_NdMrFqcvdfsLtnpiM6H9Yn2_6NWg/sync';
 
 /**
  * Settings:
@@ -266,7 +277,7 @@ $config_directories = array();
  *
  * @see install_select_profile()
  */
-# $settings['install_profile'] = '';
+$settings['install_profile'] = 'standard';
 
 /**
  * Salt for one-time login links, cancel links, form tokens, etc.
@@ -711,18 +722,6 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
  *
  * Keep this code block at the end of this file to take full effect.
  */
-# if (file_exists(__DIR__ . '/settings.local.php')) {
-#   include __DIR__ . '/settings.local.php';
-# }
-$databases['default']['default'] = array (
-  'database' => 'drupal8commerce2',
-  'username' => 'drupal8commerce2',
-  'password' => 'drupal8commerce2',
-  'prefix' => '',
-  'host' => 'localhost',
-  'port' => '',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
-$settings['install_profile'] = 'standard';
-$config_directories['sync'] = 'sites/default/files/config_lTlv6twN1CvqI5Zk5o0yrdZy_aHCTZfFH1t0vddTN9EEi_NdMrFqcvdfsLtnpiM6H9Yn2_6NWg/sync';
+if (file_exists(__DIR__ . '/settings.local.php')) {
+  include __DIR__ . '/settings.local.php';
+}
